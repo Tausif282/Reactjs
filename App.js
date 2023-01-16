@@ -27,18 +27,21 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const heading = React.createElement("h1", { id: "title" }, "Heading");
-
 // React.createElement=>object=>HTML(DOM)
 //jsx=>React.createElement=>object=>HTML(DOM)
-const heading2 = React.createElement("h1", { id: "title" }, "Heading2");
+const Title = () => {
+  return <h1>Hello React </h1>;
+};
 
-const container = React.createElement(
-  "div",
-  {
-    id: "container",
-  },
-  [heading, heading2]
-);
+const Heading = () => {
+  return (
+    <div>
+      <Title />
+      {console.log(20)}
+      <h1>Hellow React functional component</h1>
+      <h2>This is h2 Tag</h2>
+    </div>
+  );
+};
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(container);
+root.render(<Heading />);
