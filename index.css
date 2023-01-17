@@ -1,3 +1,41 @@
-#container {
-    background-color: red;
+.heading {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    border: 2px solid rgb(91, 85, 85)
+}
+
+.nav-link>ul {
+    display: flex;
+    padding-left: 2px;
+
+}
+
+.nav-link>ul>li {
+
+    list-style-type: none;
+    padding: 10px;
+
+}
+
+.logo {
+    width: 70px;
+    padding: 4px;
+}
+
+
+.card {
+    width: 200px;
+    border: 1px solid black;
+    padding: .625rem;
+    margin: .625rem;
+}
+
+.card>img {
+    width: 100%;
+}
+
+.restaurant-list {
+    display: flex;
+    flex-wrap: wrap;
 }
