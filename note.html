@@ -52,3 +52,72 @@ jsx=>React.createElement=>object=>HTML(DOM) -->
 * consistant Hashing Algorithm
 * Zero config
 * Tree Shaking---Removing un-wanted code -->
+
+<!-- 
+How to write script fot start?
+jsx
+
+ Transitive Dependencies(chapter 3)
+ React.createElement=>object=>HTML(DOM)
+ jsx=>React.createElement=>object=>HTML(DOM)
+
+chapter-4
+
+jsx component have only one parent
+
+React.Fragment is component whic is exported by react and it like a empty tag
+
+inline style in react
+
+can i use React.Fragnent inside React.Fragment ?
+
+array join using comma ?
+
+config driven UI ?
+optional chaing ?
+props?
+
+argument --passing aruguments abc(a,b)
+parameter --receave parameter function abc(a,b)
+
+virtua DOM --we keep represention of DOM in our code it is called virtual DOM 
+
+why do we need virtual DOM in react?
+
+we need virtualDOM for reconceliation react?
+
+Reconceliation is an algorithm React uses to diff one tree from other .(diff algorith). it determines what need to change what  not need to change exactly   ....
+
+
+
+this diff algorith react uses and this process is called Reconsiliation
+
+
+
+React uses virtual DOM .It is repesentation of DOM it is not actual DOM and React use something known as reconciliation . reconcilition is aprocess where we have diff algorithm which find out the difference between tress when we found out the  difference it will rerender only the portion that is required.
+
+
+tree is virtual repesention of DOM.
+
+what is React Fibre (React 16)?
+New Reconciliation engine this is doing diff now -->
+
+config.js or constant.js ----> all the hardcode things we can put in this file
+<!-- ------------------- -->
+useEffect is called after the component is render. Two things we pass inside
+useeffect is it takes call back and dependency array. if empty array then calls
+after initial render only. if donot pass dependency array the use effect will
+call after every render never write useeffect inside if else. usestate is a hook
+that react give , Never use useState outside of functional component
+
+<!-- SPA - single Page Application in which complete Page does not rerender -->
+
+<!-- There are Two types of routing 
+client side routing 
+server side routing --routes come from server -->
+
+<!-- why we use Link instead anchor tag ?
+
+Because react router DOM keeping track of  this Link behind the scene -->
+
+<!-- all children go inside outlet  -->

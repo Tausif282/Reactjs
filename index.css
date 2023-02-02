@@ -39,3 +39,20 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+.card-shimmer {
+    width: 12.5rem;
+    height: 12.5rem;
+    background-color: lightgray;
+    margin: 1.25rem;
+}
+
+.menu-detail {
+    display: flex;
+    justify-content: space-around;
+}
+
+.menuImage {
+    width: 19.5rem;
+    height: 15.5rem;
+}

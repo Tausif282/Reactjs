@@ -1,53 +1,10 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+export const IMG_CDN_URL =
+  "http://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
 
-/**
- * Header
- *    -Logo (title)
- *    -Navitem (Right side)
- *    -cart
- * Body
- *   -Search Bar
- *   -RestaurantList
- *      -RestaurantCard
- *       -Name
- *       -image
- *       -Rating
- *       -Cusines
- *  Footer
- *   -link
- *   -copyright
- */
+export const FETCH_MENU_DETAIL =
+  "https://www.swiggy.com/dapi/menu/v4/full?lat=25.5940947&lng=85.1375645&menuId=";
 
-const Title = () => {
-  return (
-    <a href="/">
-      <img
-        className="logo"
-        src="https://play-lh.googleusercontent.com/9Selca8QGhyn_1BUMJLNNnvVUQkrOJPALI4hEk8ys5DuotLDXDt4ayLBbSjsFzonNoUp"
-        alt="logo"
-      />
-    </a>
-  );
-};
-
-const Heading = () => {
-  return (
-    <div className="heading">
-      <Title />
-      <div className="nav-link">
-        <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
-          <li>Cart</li>
-        </ul>
-      </div>
-    </div>
-  );
-};
-
-const restrauList = [
+export const restrauList = [
   {
     type: "restaurant",
     data: {
@@ -1163,62 +1120,3 @@ const restrauList = [
     subtype: "basic",
   },
 ];
-
-const harilal = {
-  name: "Harilal",
-  image:
-    "http://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/cb3elcisgcyajxfsom43",
-  cusines: ["Bakery", "Sweets", "Indian"],
-  rating: "4.2",
-};
-
-const RestaurantCard = ({ cloudinaryImageId, name, cuisines, avgRating }) => {
-  //   const { cloudinaryImageId, name, cuisines, avgRating } = restrauList.data;
-  return (
-    <div className="card">
-      <img
-        alt="dis"
-        src={`http://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/${cloudinaryImageId}`}
-      />
-      <h2>{name}</h2>
-      <h3>{cuisines.join(", ")}</h3>
-      <h4>{avgRating} Stars</h4>
-    </div>
-  );
-};
-
-const Body = () => {
-  return (
-    <div className="restaurant-list">
-      {restrauList.map((restaurant) => {
-        return <RestaurantCard {...restaurant.data} />;
-      })}
-    </div>
-    /** <RestaurantCard {...restrauList[0].data} />
-        <RestaurantCard {...restrauList[1].data} />
-        <RestaurantCard {...restrauList[2].data} />
-        <RestaurantCard {...restrauList[3].data} />
-        <RestaurantCard {...restrauList[4].data} />
-        <RestaurantCard {...restrauList[5].data} />*/
-    /**  <RestaurantCard restrauList={restrauList[2]} />
-      <RestaurantCard restrauList={restrauList[3]} />
-      <RestaurantCard restrauList={restrauList[4]} />
-      <RestaurantCard restrauList={restrauList[5]} /> */
-  );
-};
-
-const Footer = () => {
-  return <h2>Footer</h2>;
-};
-
-const AppLayout = () => {
-  return (
-    <div>
-      <Heading />
-      <Body />
-      <Footer />
-    </div>
-  );
-};
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppLayout />);
